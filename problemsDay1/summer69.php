@@ -33,6 +33,6 @@ function summer69($arr) {
 	return $sum;
 }
 
-echo summer69([2,1,6,8,9,11]);
+echo summer69([2, 6,8,9,3,6,7,8,9]);
 
 ?>

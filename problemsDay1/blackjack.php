@@ -13,7 +13,10 @@ function blackJack($x, $y, $z) {
 		return "Provide value in between " . MIN . " and " . MAX;
 	} 
 
-	$sum = $x + $y + $z;
+	$sum = sum($x, $y, $z);
+	if($sum) >=21) {
+		return $sum;
+	}
 
 	if (($sum > 21) && ($x == MAX || $y == MAX || $z == MAX)) {
 		$sum-=10;
@@ -21,11 +24,9 @@ function blackJack($x, $y, $z) {
 			return "BUST";
 		}
 	}
-
-	return $sum;
 }
 
 
-echo blackJack(11, 10, 11);
+echo blackJack(10, 10, 10);
 
 ?>
