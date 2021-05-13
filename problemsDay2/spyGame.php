@@ -23,7 +23,7 @@ function spyGame($arr) {
 	return "false";
 }
 
-$arr = array(1,2,0,7,5,0,8,6,9,4,3);
+$arr = array(1,2,0,7,5,0,8,0,6,9,4,7,3);
 echo spyGame($arr);
 
 

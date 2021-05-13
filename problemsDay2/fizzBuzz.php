@@ -5,31 +5,31 @@
 // multiple of 3 and also 5 => FizzBuzz
 
 function fizzBuzz($x, $y) {
-	if($x > $y){
-		echo "$x should be less than $y";
+	if($x >= $y){
+		echo "$x should be less than $y\n";
+		return null;
 	}
 
 	$numbers = range($x, $y);
 
 	foreach ($numbers as $num) {
 		if ($num % 3 === 0 and $num % 5 === 0 ) {
-			echo "FizzBuzz";
-			echo "<br>";
+			echo "FizzBuzz\n";
+			
 		} elseif ($num % 5 === 0) {
-				echo "Buzz";
-				echo "<br>";
+				echo "Buzz\n";
+				
 			
 		} elseif ($num % 3 === 0) {
-				echo "Fizz";
-				echo "<br>";
+				echo "Fizz\n";
+				
 		}else {
-			echo $num;
-			echo "<br>";
-		}
+			echo "$num\n";
+					}
 	}
 }
 
-fizzBuzz(1, 20);
+fizzBuzz(1, 200);
 
 
 ?>

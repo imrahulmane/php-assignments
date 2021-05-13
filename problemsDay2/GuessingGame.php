@@ -1,5 +1,5 @@
 <?php
-// echo "\n";
+error_reporting(0);
 define('MIN', 1);
 define('MAX', 100);
 define('RANDOM', rand(1, 100));
@@ -19,14 +19,21 @@ while($correctGuess) {
 	if ($guess < MIN || $guess > MAX) {
 		echo "OUT OF BOUNDS";
 		echo "\n";
+		$count++;
+		continue;
 	}
+	
 	if($count == 0) {
 		 if($guess > $lessThanTen && $guess < RANDOM ) {
 		 	echo 'WARM!';
 		 	echo "\n";
+			$count++;
+			continue;
 		 } elseif ($guess < $GreaterThanTen && $guess > RANDOM) {
 		 	echo "COLD!";
 		 	echo "\n";
+			$count++;
+			continue;
 		 }
 	}
 
@@ -36,11 +43,11 @@ while($correctGuess) {
 		echo "arry_value => $value\n";
 	}
 
-	if ($guess < end($previousGuess) && $guess !== RANDOM) {
+	if ($guess < $previousGuess[count($previousGuess)-2] && $guess !== RANDOM) {
 		echo "COLDER\n";
 	}
 
-	if ($guess > end($previousGuess) && $guess !== RANDOM) {
+	if ($guess > $previousGuess[count($previousGuess)-2] && $guess !== RANDOM) {
 		echo "WARMER\n";
 	}
 
@@ -50,7 +57,7 @@ while($correctGuess) {
 		echo "\n";
 		$correctGuess = false;
 	}
-	// array_shift($previousGuess);
+
 }
 
 

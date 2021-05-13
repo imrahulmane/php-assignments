@@ -3,27 +3,28 @@
 function lengthOfWord($str) {
 
 	if(empty($str)) {
-		return "Empty String";
+		echo "Empty String\n";
+		return null;
 	}
 
 	if(is_numeric($str)){
-		return "Provide string of valid characters";
+		echo "Provide string of valid characters\n";
+		return null;
 	}
 
 	$array_words = explode(' ', $str);
 
 	foreach ($array_words as $word ) {
 		if (strlen($word) % 2 == 0) {
-			echo "Even";
-			echo "<br>";
+			echo "Even\n";
 		}else {
-			echo "Odd";
-			echo "<br>";
+			echo "Odd\n";
 		}
 	}
 
 }
 
+// $atr = "424";
 $str = 'Print every word in this sentence that has an even number of letters';
 lengthOfWord($str);
 
