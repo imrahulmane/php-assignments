@@ -15,7 +15,7 @@ function convertTime($str) {
 	return $str;
 }
 
-$str = '09:51:00PM';
+$str = '02:51:00PM';
 echo convertTime($str). "\n";
 // echo "<br>";
 

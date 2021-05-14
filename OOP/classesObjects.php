@@ -19,6 +19,10 @@ class Fruit {
     function getColor() {
         return $this->color;
     }
+
+    function changeName($updatedName) {
+        $this->name = $updatedName;
+    }
 }
 
 
@@ -29,6 +33,7 @@ $apple->setColor('Red');
 
 echo $apple->getName() . "\n";
 echo $apple->getColor() . "\n";
-
+echo $apple->changeName('Mango') . "\n";
+echo $apple->getName();
 
 ?>
