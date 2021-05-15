@@ -10,14 +10,14 @@ class Bank implements Banking {
     public function __construct($name, $email, $mobileNumber, $deposit, $type) {
         try {
             self::validateData($name, $email, $mobileNumber, $deposit, $type);
-        }catch(Exception $e) {
+        } catch(Exception $e) {
             echo $e->getMessage();
             return null;
         }
         self::saveDetails();   
     }
 
-    public function validateData($name, $email, $mobileNumber, $deposit, $type) {
+    private function validateData($name, $email, $mobileNumber, $deposit, $type) {
         if(!ctype_alpha(str_replace(' ', '', $name))) {
             throw new Exception('Provide String');
         }
