@@ -23,13 +23,11 @@ function fizzBuzz($x, $y) {
 		} elseif ($num % 3 === 0) {
 				echo "Fizz\n";
 				
-		}else {
+		} else {
 			echo "$num\n";
 					}
 	}
 }
 
-fizzBuzz(1, 200);
-
-
+fizzBuzz(1, 100);
 ?>

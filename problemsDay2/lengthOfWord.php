@@ -14,19 +14,19 @@ function lengthOfWord($str) {
 
 	$array_words = explode(' ', $str);
 
-	foreach ($array_words as $word ) {
+	foreach ($array_words as $key => $word ) {
 		if (strlen($word) % 2 == 0) {
-			echo "Even\n";
-		}else {
-			echo "Odd\n";
-		}
+			$array_words[$key] = "Even";
+		} 
 	}
+
+	return implode(' ', $array_words);
 
 }
 
 // $atr = "424";
 $str = 'Print every word in this sentence that has an even number of letters';
-lengthOfWord($str);
+print_r(lengthOfWord($str));
 
 
 ?>

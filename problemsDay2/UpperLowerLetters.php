@@ -25,11 +25,11 @@ function countUpperAndLowerChars($str) {
 		}		
 	}
 
-	return "Number of Uppercase Characters: $upperCount <br> Number of Lowercase Characters: $lowerCount";
+	return "Number of Uppercase Characters: $upperCount \n Number of Lowercase Characters: $lowerCount";
 }
 
 $str = 'Hello Mr. Rogers, how are you this fine Tuesday?';
-echo countUpperAndLowerChars($str1);
+echo countUpperAndLowerChars($str);
 
 
 

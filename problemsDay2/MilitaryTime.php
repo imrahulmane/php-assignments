@@ -15,11 +15,13 @@ function convertTime($str) {
 	return $str;
 }
 
-$str = '02:51:00PM';
-echo convertTime($str). "\n";
+$str = '01:51:00AM';
+// echo convertTime($str). "\n";
 // echo "<br>";
-
+$strToTime = strtotime($str);
+echo "$strToTime\n";
 // echo date("H:i:sA", strtotime($str)) . "\n";
+echo date('H:i:sA', $strToTime);
 
 
 

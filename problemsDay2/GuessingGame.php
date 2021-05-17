@@ -36,28 +36,24 @@ while($correctGuess) {
 			continue;
 		 }
 	}
-
+	
 	$previousGuess[] = $guess;
 	
-	foreach ($previousGuess as $value) {
-		echo "arry_value => $value\n";
-	}
-
-	if ($guess < $previousGuess[count($previousGuess)-2] && $guess !== RANDOM) {
+	if ($guess > $previousGuess[count($previousGuess)-2] && $guess !== RANDOM) {
 		echo "COLDER\n";
 	}
 
-	if ($guess > $previousGuess[count($previousGuess)-2] && $guess !== RANDOM) {
+	if ($guess < $previousGuess[count($previousGuess)-2] && $guess !== RANDOM) {
 		echo "WARMER\n";
 	}
 
-	$count++;
+	
 	if($guess == RANDOM) {
-		echo "You Guessed Correctly and you took $count guesses";
+		echo "You Guessed Correctly and you took " . $count . " guesses";
 		echo "\n";
 		$correctGuess = false;
 	}
-
+	$count++;
 }
 
 
