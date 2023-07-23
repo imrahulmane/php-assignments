@@ -2,7 +2,6 @@
 
 class Bank {
     public function __construct($name, $email, $mobileNumber, $deposit=0, $type) {
-        // self::test();
         $this->name = $name;
         $this->email = $email;
         $this->mobileNumber = $mobileNumber;
@@ -39,30 +38,5 @@ class Bank {
 
 }
 
-$user = new Bank('0', 'Rahul@gmail.com', 8087549050, 200, 'saving');
+$user = new Bank('0', 'Rahul@gmail.com', 9090909090 , 200, 'saving');
 echo $user->deposit(10000) . "\n";
-// echo $user->deposit(40000) . "\n";
-// echo $user->withdraw(5000) . "\n";
-// echo $user->deposit(5000) . "\n"; 
-// echo $user->deposit(15000) . "\n";
-// echo $user->withdraw(5000) . "\n";
-
-
-
-
-
-    // public function withdraw($amount) {
-    //     if (!$this->checkAmount($amount)) {
-    //         return "Low Balance!! Your Balance is $this->deposit";
-            
-    //     }
-    //     $this->deposit -= $amount;
-    //     return "You have remaining $this->deposit Balance in AC";
-    // }
-
-    // private function checkAmount($amount) {
-    //     if($amount > $this->deposit) {
-    //         return false;
-    //     }
-    //     return true;
-    // }

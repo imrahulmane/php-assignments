@@ -115,7 +115,4 @@ class Bank implements Banking {
     }
 }
 
-$user = new Bank('Rahul', 'Rahul@mail.com', 8087549059, 2000, 'saving');
-// echo $user->deposit(10000) . "\n";
-// echo $user->withdraw(50000) . "\n";
-// echo $user->getName();
+$user = new Bank('Rahul', 'Rahul@mail.com', 9090909090, 2000, 'saving');

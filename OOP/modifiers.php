@@ -1,21 +1,5 @@
 <?php
 
-//properties of class 
-
-// class Fruit {
-//     public $name;
-//     protected $color;
-//     private $weight;
-// }
-
-// $mango = new Fruit();
-// $mango->name = 'Mango';
-// $mango->color = 'Red';
-// $mango->weight = '20gm';
-
-
-//Methods of class
-
 //private --> access within the class only
 //protected --> acees inside class as well as inherited class
 //public --> can be access anywhere
